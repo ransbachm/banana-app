@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Banana is Life</title>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            background-image: linear-gradient(90deg, #f7e11c -9%, #4ea837 50%, #f7e11c 109%)
+        }
+    </style>
+    <script src="lib/jquery-3.5.1.min.js"></script>
+    <script>
+        // load food
+        $(document).ready((async () => ($("body").append($("<h2></h2>").append(await $.get("/api/getFood"))))));
+    </script>
+</head>
+
+<body>
+    <h1>
+        Take this cool food
+    </h1>
+
+
+</body>
+
+
+</html>
